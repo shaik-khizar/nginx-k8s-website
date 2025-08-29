@@ -1,4 +1,3 @@
-
 NGINX K8s Website Deployment
 
 This project demonstrates how to deploy a static HTML website using **NGINX** inside a Kubernetes cluster using **Minikube**. It helps beginners understand how Kubernetes **Deployments**, **Services**, **Volumes**, and **ConfigMaps** work together.
@@ -25,7 +24,6 @@ nginx-k8s-website/
 ├── README.md # Project documentation
 
 
-
 ---
 
 Prerequisites
@@ -39,26 +37,20 @@ Prerequisites
 How to Deploy
 
 1. **Start Minikube**
-   ```bash
+
    minikube start
 Deploy the NGINX Pod
-
-
 kubectl apply -f nginx-deployment.yaml
+
 Expose NGINX via NodePort
-
-
 kubectl apply -f nginx-service.yaml
+
 Get Minikube IP
-
-
 minikube ip
+
 Access the Website
-
 Visit in your browser:
-
-
 http://<minikube-ip>:<node-port>
-Example:
 
-http://192.168.49.2:80
+Example:
+http://192.168.49.2:30080
